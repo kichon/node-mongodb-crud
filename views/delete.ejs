@@ -1,0 +1,20 @@
+<h1><%= title %></h1>
+
+<p>削除</p>
+
+下記のデータを削除しますか？<br />
+
+<table border=1>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+  </tr>
+  <tr>
+    <td><%= data.seq %></td>
+    <td><%= data.name %></td>
+  </tr>
+</table>
+<form action="/delete" method="POST">
+  <input type="hidden" name="id" value="<%= data.id %>" />
+  <input type="submit" name="delete" value="削除" />
+</form>
